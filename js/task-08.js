@@ -15,4 +15,6 @@ function onloginFormSubmit(event) {
 
   console.log(`email: ${email.value}`);
   console.log(`password: ${password.value}`);
+
+  loginFormRel.reset();
 }
