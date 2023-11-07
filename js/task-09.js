@@ -8,9 +8,12 @@ const buttonRel = document.querySelector(".change-color");
 const spanRel = document.querySelector("span.color");
 
 const onChangeColorClick = buttonRel.addEventListener("click", (event) => {
-  document.querySelector("body").style.backgroundColor = getRandomHexColor();
+  // виправив
+  const currentColor = getRandomHexColor();
+
+  document.querySelector("body").style.backgroundColor = currentColor;
   // Щоб трохи було гарно)
   document.querySelector("body").style.transition =
     "250ms cubic-bezier(0.4, 0, 0.2, 1)";
-  spanRel.textContent = getRandomHexColor();
+  spanRel.textContent = currentColor;
 });

@@ -9,8 +9,13 @@ const ingredients = [
 
 const ulEl = document.querySelector("#ingredients");
 
+//виправив
+const allElements = [];
+
 const ingredientsCreateEl = ingredients.forEach((element) => {
   const createLiEl = document.createElement("li");
   createLiEl.textContent = element;
-  ulEl.append(createLiEl);
+  allElements.push(createLiEl);
 });
+
+ulEl.append(...allElements);

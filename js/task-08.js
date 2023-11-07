@@ -5,16 +5,18 @@ loginFormRel.addEventListener("submit", onloginFormSubmit);
 function onloginFormSubmit(event) {
   event.preventDefault();
 
-  const {
-    elements: { email, password },
-  } = event.currentTarget;
+  // Виправив, але мені рішення не дуже подобається()
 
-  if (email.value === "" || password.value === "") {
+  const enteredData = {
+    email: event.currentTarget.elements.email.value,
+    password: event.currentTarget.elements.password.value,
+  };
+
+  if (enteredData.email === "" || enteredData.password === "") {
     return alert("All fields must be filled!");
   }
 
-  console.log(`email: ${email.value}`);
-  console.log(`password: ${password.value}`);
+  console.log(enteredData);
 
   loginFormRel.reset();
 }

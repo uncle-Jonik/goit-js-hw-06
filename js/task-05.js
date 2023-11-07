@@ -6,7 +6,8 @@ const allRel = {
 allRel.input.addEventListener("input", onInputListener);
 
 function onInputListener(event) {
-  event.currentTarget.value !== ""
+  // виправив
+  event.currentTarget.value.trim() !== ""
     ? (allRel.span.textContent = event.currentTarget.value)
     : (allRel.span.textContent = "Anonymous");
 }
